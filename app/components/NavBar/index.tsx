@@ -27,7 +27,7 @@ export const NavBar = () => {
 
   return (
     <Box>
-      <Flex        
+      <Flex
         color={"white"}
         minH={"60px"}
         py={{ base: 2 }}
@@ -54,13 +54,13 @@ export const NavBar = () => {
         <Flex
           flex={{ base: 8, md: 1 }}
           justify={{ base: "center" }}
-          aling="center"
+          align="center"
         >
           <Image
             src="vercel.svg"
             alt="Logo"
             w={{ base: "25vw", md: "10vw" }}
-            position={{ base: "", md: "absolute" }}
+            position={{ base: "relative", md: "absolute" }}
             top={"2.2vh"}
             left={"2.2vw"}
           />
