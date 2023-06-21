@@ -1,20 +1,31 @@
 "use client"
-import { useState } from "react"
-import { Box, Image } from "@chakra-ui/react"
+import { useState, useEffect } from "react"
+import { Flex, Image } from "@chakra-ui/react"
 
 export const Loader = () => {
   const [loading, setLoading] = useState(true)
 
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false)
+    }, 3000)
+  }, [])
+
   return (
-    <Box
+    <Flex
       w={"100vw"}
       h={"100vh"}
       position={"fixed"}
+      display={loading ? "flex" : "none"}
       top={0}
       left={0}
       zIndex={1000}
-    >
-      <Image src="memejuice.png" alt="Loader" w={"100%"} />
-    </Box>
+      align={"center"}
+      justify={"center"}
+      bgImg={"memejuice.jpg"}
+      bgRepeat={"no-repeat"}
+      bgPos={"center"}
+      bgSize={"cover"}
+    />
   )
 }
