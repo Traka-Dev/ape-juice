@@ -1,6 +1,6 @@
 "use client"
 import { useState, useEffect } from "react"
-import { Flex, Image } from "@chakra-ui/react"
+import { Flex } from "@chakra-ui/react"
 import { motion } from "framer-motion"
 
 const AnimatedFlex = motion(Flex)
@@ -29,7 +29,7 @@ export const Loader = () => {
       bgPos={"center"}
       bgSize={"cover"}
       animate={{ opacity: 0, scale: 0 }}
-      transition={{ ease: "linear", duration: 2, opacity: { duration: 1.5 } }}
+      transition={{ ease: "linear", duration: 2, opacity: { duration: 2 } }}
     />
   )
 }
