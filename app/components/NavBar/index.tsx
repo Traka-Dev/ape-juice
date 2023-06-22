@@ -30,6 +30,7 @@ export const NavBar = () => {
       <Flex
         color={"white"}
         minH={"60px"}
+        h={"10vh"}
         py={{ base: 2 }}
         px={{ base: 4 }}
         borderBottom={1}
@@ -244,19 +245,19 @@ interface NavItem {
 
 const NAV_ITEMS: Array<NavItem> = [
   {
-    label: "Inspiration",
+    label: "Home",
     href: "#",
   },
   {
-    label: "Find Work",
+    label: "About us",
     href: "#",
   },
   {
-    label: "Learn Design",
+    label: "Contact",
     href: "#",
   },
   {
-    label: "Hire Designers",
+    label: "Comming Soon",
     href: "#",
   },
 ]
