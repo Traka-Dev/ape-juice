@@ -11,19 +11,22 @@ export default function Home() {
       <Flex
         h={"90vh"}
         w={"100vw"}
-        justify={{ base: "start", md: "space-around" }}
+        justify={{ base: "space-between", md: "space-around" }}
         align="center"
         flexDir={{ base: "column-reverse", md: "row" }}
       >
-        <Image
-          src="ape-juice.png"
-          alt="ape juice"
-          w={{ base: "100%", md: "xl" }}
-        />
+        <div className="glow-border">
+          <Image
+            src="ape-juice.png"
+            alt="ape juice"
+            w={{ base: "100%", md: "xl" }}
+          />
+        </div>
         <Flex flexDir={"column"} align={"center"} justify={"center"} p={5}>
           <Heading
             textAlign={"center"}
             fontFamily={"mainTitle"}
+            mt={{ base: 50, md: 0 }}
             fontSize={{ base: "5xl", md: "4xl", lg: "7xl" }}
           >
             MEME JUICE
