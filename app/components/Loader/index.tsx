@@ -1,7 +1,9 @@
 "use client"
 import { useState, useEffect } from "react"
 import { Flex, Image } from "@chakra-ui/react"
+import { motion } from "framer-motion"
 
+const AnimatedFlex = motion(Flex)
 export const Loader = () => {
   const [loading, setLoading] = useState(true)
 
@@ -12,7 +14,7 @@ export const Loader = () => {
   }, [])
 
   return (
-    <Flex
+    <AnimatedFlex
       w={"100vw"}
       h={"100vh"}
       position={"fixed"}
@@ -26,6 +28,8 @@ export const Loader = () => {
       bgRepeat={"no-repeat"}
       bgPos={"center"}
       bgSize={"cover"}
+      animate={{ opacity: 0, scale: 0 }}
+      transition={{ ease: "linear", duration: 2, opacity: { duration: 1.5 } }}
     />
   )
 }
